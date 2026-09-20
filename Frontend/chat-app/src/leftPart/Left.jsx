@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Search from './Search';
 
 function Left() {
   return (
-    <div>
-      
+    <div className='w-[30%] bg-black text-white'>
+        <Search/>
+     
     </div>
   )
 }
