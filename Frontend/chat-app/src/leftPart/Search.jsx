@@ -4,7 +4,8 @@ import { FaSearch } from "react-icons/fa";
 
 function Search() {
   return (
-    <div className='px-3 py-4'>
+   <div className='h-[10vh]'>
+      <div className='px-2 py-2'>
 
     <form action="">
     <div className='flex space-x-2 gap-3'>
@@ -21,6 +22,8 @@ function Search() {
     </div>
     </form>
     </div>
+    </div>
+   
   )
 }
 
