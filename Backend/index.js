@@ -1,6 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 const app =express();
+app.use(express.json());
+
+import userroutes from './routes/userroutes.js';
 import mongoose from 'mongoose';
 import dns from "dns";
 
@@ -18,6 +21,7 @@ try {
     console.log(error)
     
 }
+app.use('/user',userroutes)
 
 app.get('/' ,(req,res)=>{
     res.send("hello world vidhi chaudhary");
