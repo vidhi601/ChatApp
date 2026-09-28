@@ -4,11 +4,12 @@ import Paragraph from "./Paragraph";
 import Input from "./Input";
 import Button from "./Button";
 import Login from "./Login";
+import { Link } from "react-router-dom";
 
 function Signup() {
   return (
-    <div className="min-h-screen bg-purple-800 flex items-center justify-center px-4">
-      <div className="w-full max-w-md bg-blue-300 rounded-2xl shadow-xl p-8">
+    <div className="min-h-screen bg-blue-100 flex items-center justify-center px-4">
+      <div className="w-full max-w-md bg-pink-100 rounded-2xl shadow-xl p-8">
 
         <div className="text-center mb-7">
           <Heading/>

@@ -1,7 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import "./jwt/generateToken.js";
 const app =express();
 app.use(express.json());
+
 
 import userroutes from './routes/userroutes.js';
 import mongoose from 'mongoose';

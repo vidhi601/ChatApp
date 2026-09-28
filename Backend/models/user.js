@@ -14,14 +14,8 @@ const userSchema=mongoose.Schema({
     password:{
         type:String,
         required:true
-    },
-    confirmPassword:{
-       
-        type:String,
-        required:true
- 
-
     }
+    
 
 
 
