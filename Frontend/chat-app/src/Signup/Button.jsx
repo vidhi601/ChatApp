@@ -1,14 +1,19 @@
 import React from 'react'
 
-function Button() {
+function Button({ onClick }) {
   return (
     <div>
-                <button className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold mt-2 hover:bg-indigo-700 transition">
-            Sign Up
-          </button>
-
+      <button
+        onClick={() => {
+          console.log("BUTTON CLICKED");
+          onClick();
+        }}
+        className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold mt-2 hover:bg-indigo-700 transition"
+      >
+        Sign Up
+      </button>
     </div>
   )
 }
 
-export default Button
+export default Button;

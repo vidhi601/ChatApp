@@ -3,6 +3,8 @@ import user from "../models/user.js";
 import bcrypt from "bcrypt";
 
 export const signup = async (req, res) => {
+        console.log("DATA FROM FRONTEND:", req.body);
+
     const { fullname, email, password, confirmPassword } = req.body;
 
     try {
