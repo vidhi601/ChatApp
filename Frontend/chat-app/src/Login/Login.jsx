@@ -2,8 +2,15 @@ import { Link } from "react-router-dom";
 import InputField from "../Signup/Input";
 import Heading from "./Heading";
 import SignupLink from "./SignupLink";
+import { useState } from "react";
 
 function Login() {
+
+  const handleLogin = async () =>{
+
+    const response = await fetch("http://localhost:3004/user/login",{})
+
+  }
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-100 px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
