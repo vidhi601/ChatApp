@@ -29,6 +29,7 @@ function Login() {
     setError("");
 
     try {
+      // 1. Login request
       const response = await fetch(
         "http://localhost:3004/user/login",
         {
@@ -48,7 +49,34 @@ function Login() {
         return;
       }
 
-alert("Login successful");
+      // 2. Protected profile request
+      const profileResponse = await fetch(
+        "http://localhost:3004/user/profile",
+        {
+          method: "GET",
+          credentials: "include",
+        }
+      );
+
+      const profileData = await profileResponse.json();
+
+      if (!profileResponse.ok) {
+        setError(
+          profileData.message || "Could not fetch profile"
+        );
+        return;
+      }
+
+      // 3. Check profile response
+      console.log("Logged-in user profile:", profileData.user);
+
+      alert(
+        `Login successful! Welcome ${profileData.user.fullname}`
+      );
+
+      // Chat page navigation baad mein implement karenge.
+      // Abhi profile API test kar rahe hain.
+
     } catch (error) {
       console.error("Login error:", error);
       setError("Unable to connect to server");

@@ -91,3 +91,10 @@ export const logout = async (req, res) => {
         });
     }
 };
+
+
+export const getProfile = async (req, res) => {
+  res.status(200).json({
+    user: req.user,
+  });
+};
