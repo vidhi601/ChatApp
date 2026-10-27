@@ -98,3 +98,20 @@ export const getProfile = async (req, res) => {
     user: req.user,
   });
 };
+
+
+export const getUsers = async (req, res) => {
+    try {
+        const users = await user.find({
+            _id: { $ne: req.user._id }
+        }).select("-password");
+
+        return res.status(200).json({ users });
+
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            error: "Server error"
+        });
+    }
+};

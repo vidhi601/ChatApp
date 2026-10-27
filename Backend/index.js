@@ -31,6 +31,8 @@ try {
     console.log(error)
     
 }
+app.use(cookieParser());
+
 app.use('/user',userroutes)
 
 app.get('/' ,(req,res)=>{

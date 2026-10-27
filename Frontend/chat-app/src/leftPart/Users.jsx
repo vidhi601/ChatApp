@@ -16,8 +16,8 @@ function Users({name,email}) {
         </div>
 
         <div>
-          <h1 className="font-bold">kashvi</h1>
-          <p className="text-sm">kashvimalik11@gmail.com</p>
+          <h1 className="font-bold">{name}</h1>
+          <p className="text-sm">{email}</p>
         </div>
 
       </div>
