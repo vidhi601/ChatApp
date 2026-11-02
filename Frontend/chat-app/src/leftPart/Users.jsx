@@ -1,11 +1,16 @@
 import React from 'react'
 
 
-function Users({name,email}) {
+function Users({name,email,onClick}) {
   return (
     <div>
-          <div className="flex items-center space-x-3 mt-5 ml-3 hover:bg-slate-500 rounded-lg w-full cursor-pointer ">
- 
+<div
+  onClick={() => {
+    console.log("User clicked:", name);
+    onClick?.();
+  }}
+  className="flex items-center space-x-3 mt-5 ml-3 hover:bg-slate-500 rounded-lg w-full cursor-pointer"
+>
         <div className="avatar ml-2">
           <div className="w-12 h-12 rounded-full">
             <img

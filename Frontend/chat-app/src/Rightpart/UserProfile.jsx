@@ -1,6 +1,6 @@
 import React from 'react'
 
-function UserProfile() {
+function UserProfile({ selectedUser }) {
   return (
     <div className='flex justify-center items-center space-x-5 bg-gray-800 hover:bg-gray-700 p-1 rounded-lg cursor-pointer h-[8vh]'>
       <div className="avatar ml-2">
@@ -12,8 +12,10 @@ function UserProfile() {
           </div>
         </div>
         <div>
-          <h1 className='text-xl'>kashvi</h1>
-          <h1 className='text-sm'>offline</h1>
+    <h1 className="text-xl">
+     {selectedUser?.fullname || "Select a user"}
+     </h1>  
+        <h1 className='text-sm'>offline</h1>
         </div>
     </div>
   )

@@ -68,11 +68,9 @@ function Login() {
       }
 
     
-      console.log("Logged-in user profile:", profileData.user);
 
-      alert(
-        `Login successful! Welcome ${profileData.user.fullname}`
-      );
+      console.log("Logged-in user profile:", profileData.user);
+navigate("/");
 
       
 

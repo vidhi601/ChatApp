@@ -5,7 +5,7 @@ import User from './User';
 import Logout from './Logout';
 import { Link } from 'react-router-dom';
 
-function Left() {
+function Left({ onSelectUser }) {
   const [loggedUser, setLoggedUser] = useState(null);
   const [search, setSearch] = useState('');
 
@@ -56,7 +56,7 @@ function Left() {
       <Search onSearchChange={setSearch} />
 
       <div className="flex-1 min-h-0">
-        <User search={search} />
+        <User search={search} onSelectUser={onSelectUser}/>
       </div>
 
       <Link to="/signup" className="mt-auto p-3 shrink-0">

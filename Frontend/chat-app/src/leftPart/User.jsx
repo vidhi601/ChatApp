@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Users from './users';
 
-function User({ search = '' }) {
+function User({ search = '',onSelectUser }) {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -60,6 +60,7 @@ function User({ search = '' }) {
               key={person._id}
               name={person.fullname}
               email={person.email}
+              onClick={() => onSelectUser(person)}
             />
           ))
         ) : (
